@@ -15,7 +15,7 @@ const [windows,setWindows] = useState(window.innerWidth);
   useEffect(()=>{
      window.addEventListener('resize',()=>setWindows(window.innerWidth));
   },[])
-console.log(windows);
+
   return(
      <>
       <Header/>

@@ -29,17 +29,16 @@ const Destination = () => {
               <span className="text-slate-600">01</span> Pick your destinatioN
             </h4>
             
-            <motion.div 
-           
-            initial={{x:50}}
-            animate={{x:1}}
-            transition={{duration:1}}
-            whileHover={{scale:1.1}}
-            className="w-[170px] h-[170px] rounded-full md:w-[300px] md:h-[300px] xl:w-[445px] xl:h-[445px] cursor-pointer">
+            <div className="w-[170px] h-[170px] rounded-full md:w-[300px] md:h-[300px] xl:w-[445px] xl:h-[445px] cursor-pointer">
               {/* <img src={moon} alt="" />  */}
-              <img
+              <motion.img
+               whileHover={{scale:1.1}}
+               animate={{rotate: destination === 1 ? 360 : destination === 2 ? 0 :destination === 3 ? -360 : -500}}
+               
+               transition={{duration:1}}
+               
               src={imagenes(`./${info.destination[destination].img}`)} />
-            </motion.div>
+            </div>
          
           </div>
           {/* aqui va el nav moon mars europa titan */}
